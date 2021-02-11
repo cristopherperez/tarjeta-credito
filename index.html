@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <card-form
+      card-number="5000123412341234"
+    ></card-form>
+
+    <template id="card-number">
+      <link href="components/card-number/card-number.css" rel="stylesheet" type="text/css" />
+      <input type="text" placeholder="Número de tarjeta">
+    </template>
+
+    <template id="card-form">
+      <link href="components/card-form/card-form.css" rel="stylesheet" type="text/css" /> 
+      <card-front></card-front>
+      <card-number></card-number>
+      <card-owner></card-owner>
+      <card-expiration></card-expiration>
+      <button>Validar</button>
+      <div class="error"></div>
+    </template>
+
+    <template id="card-front">
+      <link href="components/card-front/card-front.css" rel="stylesheet" type="text/css" />
+
+    <form class="card-form">
+      <div class="card">
+        <section class="card__front">
+          <footer class="card__header">
+            <span class="card__logo">
+            </span>
+          </footer>
+          <footer class="card__footer">
+            <label class="card__number" >
+              5000 **** **** ****
+            </label>
+            <label class="card__owner-name">
+              JOEL*********
+            </label>
+            <label class="card__expiration">
+              02/****
+            </label>
+          </footer>
+        </section>
+      </div>
+    </form>
+
+    </template>
+    <template id="card-owner">
+      <link href="components/card-owner/card-owner.css" rel="stylesheet" type="text/css" />
+      <input type="text" placeholder="Nombre de la persona titular">
+    </template>
+    
+    <template id="card-expiration">
+      <link href="components/card-expiration/card-expiration.css" rel="stylesheet" type="text/css" />
+      <input type="text" placeholder="Fecha de vencimiento">
+    </template>
+    
+    <script src="script.js"></script>
+    <script src="utilidades.js"></script>
+    <script src="analizador-tarjeta.js"></script>
+    <script src="components/card-form/card-form.js"></script>
+    <script src="components/card-front/card-front.js"></script>
+    <script src="components/card-number/card-number.js"></script>
+    <script src="components/card-owner/card-owner.js"></script>
+    <script src="components/card-expiration/card-expiration.js"></script>
+</body>
+</html>

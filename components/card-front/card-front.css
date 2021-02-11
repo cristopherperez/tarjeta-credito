@@ -1,0 +1,106 @@
+.card {
+    border-radius: 10px;
+    display: flex;
+    width: 15rem;
+    height: 9rem;
+    padding: 1rem 1.25rem;
+    background: #aaa;
+    font-family: monospace;
+    box-shadow: 1px 0px 20px #999;
+    color: #fff;
+    transition: all 1s linear;
+    margin-bottom: 1rem;
+  }
+  
+  .card__front,
+  .card__back {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card__logo {
+    background-image: url("./logos.svg");
+    background-size: 17.076923076923077em 79.6923076923077em;
+    display: inline-block;
+  }
+  
+  .card--visa {
+    background: linear-gradient(135deg, #003366, #007799);
+  }
+  
+  .card--visa .card__logo {
+    background-position: -0.07692307692307693em -73.46153846153847em;
+    width: 15em;
+    height: 3em;
+  }
+  
+  .card--master {
+    background: linear-gradient(135deg, #111111, #444444);
+  }
+  
+  .card--master .card__logo {
+    background-position: -0.07692307692307693em -51.84615384615385em;
+    width: 4.230769230769231em;
+    height: 3.076923076923077em;  
+  }
+  
+  .card--amex {
+    background: linear-gradient(135deg, #008888, #00aaaa);
+  }
+  
+  .card--amex .card__logo {
+    background-position: -0.07692307692307693em -0.07692307692307693em;
+    width: 3.4615384615384617em;
+    height: 3.4615384615384617em;
+  }
+  
+  .card__header,
+  .card__footer {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  
+  .card__number {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  
+  .card__owner-name, .card__expiration {
+    flex: 1;
+    font-size: 0.85rem;
+  }
+  
+  .card__number,
+  .card__owner-name,
+  .card__expiration {
+    text-shadow: 1px 1px 000 rgba(0, 0, 0, 0.5);
+  }
+  
+  .card__number::before,
+  .card__owner-name::before,
+  .card__expiration::before {
+    display: block;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 0.75rem;
+  }
+  
+  .card__number::before {
+    content: "Número de tarjeta";
+  }
+  
+  .card__owner-name::before {
+    content: "A nombre de";
+  }
+  
+  .card__expiration::before {
+    content: "Vence";
+  }
+  
+  .card__back {
+    background: #777;
+    display: none;
+  }

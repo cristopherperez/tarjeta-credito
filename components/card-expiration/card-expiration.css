@@ -1,0 +1,35 @@
+input[type="text"] {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #666;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    display: block;
+    width: 15rem;
+    transition: all 150ms linear;
+    height: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="text"]::placeholder {
+    position: relative;
+    transition: all 150ms linear;
+    top: 0;
+  }
+  
+  input[type="text"]:focus {
+    border-bottom-color: #003366;
+    outline: none;
+    border-bottom-width: 2px;
+  }
+  
+  input[type="text"]:focus::placeholder {
+    font-size: 0.65rem;
+    color: #003366;
+    top: -1rem;
+  }
+  
+  .error {
+    color: #880000;
+  }
